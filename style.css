@@ -1,0 +1,252 @@
+:root {
+  --gap: 0.1em;
+}
+
+@font-face {
+    font-family: pixel;
+    src: url(fonts/Early-GameBoy.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  font-family: pixel;
+  text-align: center;
+  background-image: url("images/clouds.gif");
+  margin: 0;
+}
+
+
+h1 {
+ color: white ;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-bottom: solid white 1px;
+  text-transform: uppercase;
+  letter-spacing: .25em;
+  margin: 0;
+  font-size: 50px;
+  font-family: pixel;
+}
+
+.nav-bar {
+  background: #AB71B6;
+  color: white;
+  top: 0;  
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+
+
+}
+
+.nav-bar-options {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: pixel;
+}
+
+.option {
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: top;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.option:hover {
+  background-color: #AB71B6;
+  text-decoration: underline;
+}
+
+li a { text-decoration: none; color: white; }
+ li a:visited { text-decoration: none; color:white; }
+ li a:hover { text-decoration: none; color:white; }
+ li a:focus { text-decoration: none; color:white; }
+ li a:hover, .navBtn:active { text-decoration: none; color:white; }
+
+.top-header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 40px;
+   margin-left: 100px;
+   font-size: 1.75em;
+}
+
+
+.score {
+   display: flex;
+   align-items: center;
+   margin-left: 400px;
+}
+.score-count {
+   color: #AB71B6;
+   font-size: 2em;
+   font-weight:bold;
+   margin-left: 0.2em;
+}
+
+.column ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+.board {
+   display: flex;
+   justify-content: space-around;
+   font-size: 25px;
+   padding: 20px;
+}
+.board .column {
+   flex: 1;
+   margin-left: var(--gap);
+   margin-right: var(--gap);
+}
+.board .column header {
+   text-transform: capitalize;
+   background: #AB71B6;
+   text-align: center;
+   margin-bottom: 1em;
+   height: 3em;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.board .column li {
+   background: #9E7EC3;
+   color: white;
+   height: 3em;
+   margin-bottom: 0.25em;
+}
+.board .column button {
+   height: 100%;
+   color: inherit;
+   font-size: 1.5em;
+   -webkit-appearance: none;
+   border: 0;
+   background: none;
+   display: block;
+   width: 100%;
+   cursor: pointer;
+   font-weight:bold;
+   font-family: pixel;
+}
+.board .column button.used {
+   visibility: hidden;
+}
+
+.card-modal {
+   opacity: 0;
+   pointer-events:none;
+   transition: opacity 0.4s;
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   background: #9E7EC3;
+   position: fixed;
+   font-size: 2vw;
+   text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.card-modal.visible {
+   opacity: 1;
+   pointer-events:initial;
+}
+.card-modal.showing-result .result {
+   display:block;
+}
+
+.card-model .clue-text {
+   margin-bottom: 2em;
+}
+
+.result,
+.card-modal.showing-result form {
+   display:none;
+}
+
+.card-modal form {
+   display: flex;
+}
+.card-modal form input[type="text"] {
+   display: block;
+   flex-grow: 1;
+   height: 3em;
+   line-height: 3em;
+   border: 0;
+   text-align: center;
+   border-top-left-radius: 0.4em;
+   border-bottom-left-radius: 0.4em;
+}
+.card-modal form button[type="submit"] {
+   padding-left: 2em;
+   padding-right: 2em;
+   cursor: pointer;
+   font-family: inherit;
+   background: white;
+   border: 0;
+   font-size: inherit;
+   border-top-right-radius: 0.4em;
+   border-bottom-right-radius: 0.4em;
+   margin-left: 100px;
+}
+
+
+.card-modal-inner {
+   width: 60%;
+   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.result_success, .result_fail {
+   font-size: 2em;
+   font-weight:bold;
+}
+.result_success {
+   color: #90EE90;
+}
+.result_fail {
+   color: #db504a  ; 
+}
+.result_correct-answer-text {
+   font-weight:bold;
+   font-size: 2em;
+   display:block;
+   margin-left: 0.1em;
+}
+
+ 
+/* about page */
+
+.media {
+  padding-top: 10pc;
+  margin-right: 30pc;
+  margin-left: 30pc;
+}
+
+.character {
+  padding-top: 20px;
+ 
+}
+
+.insta {
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+}
+
+.clue-category {
+  color: white;
+  
+}
